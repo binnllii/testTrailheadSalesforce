@@ -1,0 +1,31 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="truthy" default="false" type="Boolean" />
+    <aura:attribute name="colourList" type="List" default="['red','blue','black']" />
+    <aura:attribute name="mapVar" type="List"/>
+	<div class="slds-p-around_x-large">  	
+        <h1 class="red">im in lightning component</h1>
+        <p>im inside paragraph</p>
+        <div class="blue">
+            im inside div
+        </div>
+        <span class="black">
+            im inside span tag
+        </span>
+    </div>
+
+    <aura:if isTrue="{!v.truthy}">
+        eee
+        <aura:set attribute="else">
+            bool
+        </aura:set>
+    </aura:if> 
+    
+    <aura:iteration items="{!v.colourList}" var="item">
+        {!item} <br/>
+    </aura:iteration>
+    <aura:iteration items="{!v.mapVar}" var="map" >
+        Key : - {!map.key} and value : {!map.value} <br/>
+    </aura:iteration>
+    <lightning:button label="CreateMap" onclick="{c.doCreateMap}" />
+
+</aura:component>

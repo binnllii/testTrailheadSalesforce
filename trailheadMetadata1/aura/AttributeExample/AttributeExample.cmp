@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="Whom" type="String" default="SFDCPanther" access="public" />
+    
+    <lightning:button value="Component Methods" label="jjj" onclick="{!c.doClick}" />
+    <lightning:input aura:id="testInput" value="Whom"/>
+    welcome{!v.Whom}
+</aura:component>
