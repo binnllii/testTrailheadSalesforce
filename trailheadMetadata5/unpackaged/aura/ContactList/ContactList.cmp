@@ -4,7 +4,7 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
     <aura:iteration items="{v.contactList}" var="con">
-        {!con.Name} <br/>
+        <br/>
         {!con.Phone}
         
 
