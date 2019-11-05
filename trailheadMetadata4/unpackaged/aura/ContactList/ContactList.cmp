@@ -5,7 +5,7 @@
     
     <aura:iteration items="{v.contactList}" var="con">
         {!con.Name} <br/>
-        {!con.Email} {!con.Phone}
+        {!con.Phone}
         
 
     </aura:iteration>
